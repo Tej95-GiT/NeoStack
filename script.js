@@ -1,48 +1,41 @@
 // Smooth scroll to section
 function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
-// Dark theme toggle
+// Improved dark theme toggle
 function toggleTheme() {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  const body = document.body;
+  const isDark = body.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  // Optional: update button icon
+  const toggleBtn = document.querySelector('.theme-toggle');
+  if (toggleBtn) toggleBtn.textContent = isDark ? '☀️' : '🌙';
 }
 
-// Load dark mode if previously set
+// Load theme preference on start
 window.onload = () => {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
+    const toggleBtn = document.querySelector('.theme-toggle');
+    if (toggleBtn) toggleBtn.textContent = '☀️';
   }
 };
 
-// Toggle roadmap details per card
+// Roadmap toggle (deprecated, replaced by vertical roadmap UI)
 function toggleDetails(card) {
-  const details = card.querySelector('.details');
-  const allCards = document.querySelectorAll('.roadmap-card');
-
-  allCards.forEach(c => {
-    if (c !== card) {
-      c.classList.remove('active');
-      c.querySelector('.details').style.display = 'none';
-    }
-  });
-
-  if (card.classList.contains('active')) {
-    details.style.display = 'none';
-    card.classList.remove('active');
-  } else {
-    details.style.display = 'block';
-    card.classList.add('active');
-  }
+  // no-op (functionality shifted to vertical roadmap progress)
 }
 
 // Notes: Add a new note
 function addNote() {
   const input = document.getElementById('noteInput');
   const noteText = input.value.trim();
-
-  if (noteText === '') return;
+  if (!noteText) return;
 
   const li = document.createElement('li');
   li.innerHTML = `${noteText} <span class="delete" onclick="deleteNote(this)">✕</span>`;
@@ -55,7 +48,7 @@ function deleteNote(el) {
   el.parentElement.remove();
 }
 
-// Gallery: Open modal image
+// Gallery Modal (used for certifications now)
 function openModal(src) {
   const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('modalImage');
@@ -63,44 +56,13 @@ function openModal(src) {
   modalImg.src = src;
 }
 
-// Gallery: Close modal
 function closeModal() {
   document.getElementById('imgModal').style.display = 'none';
 }
 
-// Contact: Fake form submission
+// Fake form submit
 function submitFake(e) {
   e.preventDefault();
   alert('Message sent (demo only)');
 }
-// Contact: Validate email
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
-} 
-
-// Contact: Validate form
-function validateForm() {
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  if (!validateEmail(email)) {
-    alert('Please enter a valid email address.');
-    return false;
-  }
-  if (message.trim() === '') {
-    alert('Message cannot be empty.');
-    return false; 
-
-  }
-  return true;
-}
-
-// Contact: Handle form submission
-function handleSubmit(e) {
-  e.preventDefault();
-  if (validateForm()) {
-    document.getElementById('contactForm').submit();
-  }
-}
-// FAQ: Toggle answer visibility
-
+// Smooth scroll for anchor links
