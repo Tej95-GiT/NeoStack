@@ -1,10 +1,14 @@
 // Smooth scroll to section
 function scrollToSection(id) {
   const target = document.getElementById(id);
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  if (!target) return;
+
+  window.scrollTo({
+    top: target.offsetTop,
+    behavior: 'smooth'
+  });
 }
+// Smooth scroll for anchor links
 
 // Improved dark theme toggle
 function toggleTheme() {
@@ -66,3 +70,31 @@ function submitFake(e) {
   alert('Message sent (demo only)');
 }
 // Smooth scroll for anchor links
+
+
+//mc complicationssss
+
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.logo img');
+  const container = document.querySelector('.logo');
+
+  if (!logo || !container) return;
+
+  container.addEventListener('mousemove', (e) => {
+    const bounds = container.getBoundingClientRect();
+    const x = e.clientX - bounds.left;
+    const y = e.clientY - bounds.top;
+    const centerX = bounds.width / 2;
+    const centerY = bounds.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -15;
+    const rotateY = ((x - centerX) / centerX) * 15;
+
+    logo.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  });
+
+  container.addEventListener('mouseleave', () => {
+    logo.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  });
+});
+
