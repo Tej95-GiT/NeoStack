@@ -24,62 +24,34 @@
     <div class="hero-buttons">
       <button onclick="scrollToSection('roadmap')">Start Roadmap</button>
       <button onclick="scrollToSection('notes')">Quick Notes</button>
-      <button onclick="scrollToSection('gallery')">Gallery</button>
+      <button onclick="scrollToSection('certifications')">Certifications</button>
+      <button onclick="scrollToSection('about')">About Me</button>
     </div>
   </header>
 
   <!-- Roadmap Section -->
   <section id="roadmap" class="roadmap-section">
-    <h2>DevPath – Roadmap</h2>
-    <p>Explore the essential steps of a developer journey</p>
-
-    <div class="roadmap-grid" data-aos="fade-up">
-      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-        <h3>HTML</h3>
-        <ul class="details">
-          <li>Semantic Tags</li>
-          <li>Forms & Inputs</li>
-          <li>SEO Basics</li>
-        </ul>
-      </div>
-
-      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-        <h3>CSS</h3>
-        <ul class="details">
-          <li>Flexbox & Grid</li>
-          <li>Media Queries</li>
-          <li>Animations</li>
-        </ul>
-      </div>
-
-      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-        <h3>JavaScript</h3>
-        <ul class="details">
-          <li>DOM Manipulation</li>
-          <li>Events</li>
-          <li>Local Storage</li>
-        </ul>
-      </div>
-
-      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-        <h3>Git & GitHub</h3>
-        <ul class="details">
-          <li>Commits & Branches</li>
-          <li>Pull Requests</li>
-          <li>Pages Deployment</li>
-        </ul>
-      </div>
-
-      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-        <h3>Projects</h3>
-        <ul class="details">
-          <li>Portfolio Site</li>
-          <li>Landing Page</li>
-          <li>Mini Tools</li>
-        </ul>
+  <h2>Dev Journey</h2>
+  <div class="roadmap-vertical">
+    <div class="roadmap-left">
+      <ul>
+        <li class="step active">HTML Basics</li>
+        <li class="step">CSS Layouts</li>
+        <li class="step">JavaScript Logic</li>
+        <li class="step">Git & GitHub</li>
+        <li class="step">Projects</li>
+      </ul>
+    </div>
+    <div class="roadmap-right">
+      <div class="info" data-aos="fade-left">
+        <h3>Track Your Developer Journey</h3>
+        <p>This roadmap shows the stages of your growth, step by step. It’s a visual timeline, not just content blocks.</p>
+        <p>As you move forward, you can animate or interact with this to mark progress.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Notes Section -->
   <section id="notes" class="notes-section">
@@ -95,24 +67,23 @@
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery-section">
-    <h2>Photography Showcase</h2>
-    <p>Scroll through selected frames that shaped my view.</p>
+  <section id="certifications" class="gallery-section">
+  <h2>Certifications</h2>
+  <p>Recognitions and milestones in my learning path.</p>
 
-    <div class="gallery-container" data-aos="zoom-out-up">
-      <img src="/content/aws.jpg" alt="gallery" onclick="openModal(this.src)">
-      <img src="/content/EA.jpg" alt="gallery" onclick="openModal(this.src)">
-      <img src="/content/Mastercard.jpg" alt="gallery" onclick="openModal(this.src)">
-      <img src="https://source.unsplash.com/random/400x300?sig=4" alt="gallery" onclick="openModal(this.src)">
-      <img src="https://source.unsplash.com/random/400x300?sig=5" alt="gallery" onclick="openModal(this.src)">
-    </div>
+  <div class="gallery-container" data-aos="zoom-out-up">
+    <img src="contents/certificate1.jpg" alt="cert1" onclick="openModal(this.src)">
+    <img src="contents/certificate2.jpg" alt="cert2" onclick="openModal(this.src)">
+    <img src="contents/certificate3.jpg" alt="cert3" onclick="openModal(this.src)">
+  </div>
 
-    <!-- Modal -->
-    <div id="imgModal" class="modal" onclick="closeModal()">
-      <span class="close">✕</span>
-      <img alt="img" class="modal-content" id="modalImage">
-    </div>
-  </section>
+  <!-- Modal viewer -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="close">✕</span>
+    <img alt="mc" class="modal-content" id="modalImage" />
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about" class="about-section">

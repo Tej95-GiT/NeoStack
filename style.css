@@ -203,6 +203,7 @@ footer {
 }
 
 .gallery-container {
+  
   display: flex;
   overflow-x: auto;
   gap: 20px;
@@ -320,4 +321,51 @@ footer {
 .contact-form button:hover {
   background: #39ff14;
   box-shadow: 0 0 15px #39ff14;
+}
+
+.roadmap-vertical {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.roadmap-left ul {
+  list-style: none;
+  padding: 0;
+  border-left: 3px solid #00f9ff;
+  padding-left: 20px;
+}
+
+.roadmap-left .step {
+  margin: 20px 0;
+  position: relative;
+  font-weight: bold;
+  color: #00f9ff;
+}
+
+.roadmap-left .step::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #00f9ff;
+  border-radius: 50%;
+  position: absolute;
+  left: -28px;
+  top: 5px;
+}
+
+.roadmap-left .step.active::before {
+  background: #39ff14;
+}
+
+.roadmap-right .info {
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(8px); /*  for Safari */
+  backdrop-filter: blur(8px);         /*  standard */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
