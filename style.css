@@ -2,7 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+
 }
+
+body.dark {
+  background: #000;
+  color: #eee;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body.dark .roadmap-card,
+body.dark .note-list li,
+body.dark .gallery-section,
+body.dark .about-section {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+
+/* Global Styles */
+
+.back-glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+/* end of global styles */
+
 
 body {
   font-family: 'Segoe UI', sans-serif;

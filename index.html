@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeoStack – Dev Journey</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 <body>
 
   <!-- Hero Section -->
   <header class="hero">
+    <button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/TejasWalunj/NeoStack/main/logo.png" alt="NeoStack Logo" />
+    </div>
+
     <h1>Build. Capture. Evolve.</h1>
     <p>Explore my journey through code, thoughts, and frames.</p>
     <div class="hero-buttons">
@@ -24,8 +36,8 @@
   <h2>DevPath – Roadmap</h2>
   <p>Explore the essential steps of a developer journey</p>
 
-  <div class="roadmap-grid">
-    <div class="roadmap-card" onclick="toggleDetails(this)">
+  <div class="roadmap-grid" data-aos="fade-up">
+    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
       <h3>HTML</h3>
       <ul class="details">
         <li>Semantic Tags</li>
@@ -34,7 +46,7 @@
       </ul>
     </div>
 
-    <div class="roadmap-card" onclick="toggleDetails(this)">
+    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
       <h3>CSS</h3>
       <ul class="details">
         <li>Flexbox & Grid</li>
@@ -43,7 +55,7 @@
       </ul>
     </div>
 
-    <div class="roadmap-card" onclick="toggleDetails(this)">
+    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
       <h3>JavaScript</h3>
       <ul class="details">
         <li>DOM Manipulation</li>
@@ -52,7 +64,7 @@
       </ul>
     </div>
 
-    <div class="roadmap-card" onclick="toggleDetails(this)">
+    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
       <h3>Git & GitHub</h3>
       <ul class="details">
         <li>Commits & Branches</li>
@@ -61,7 +73,7 @@
       </ul>
     </div>
 
-    <div class="roadmap-card" onclick="toggleDetails(this)">
+    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
       <h3>Projects</h3>
       <ul class="details">
         <li>Portfolio Site</li>
@@ -76,7 +88,7 @@
   <h2>Quick Note Tool</h2>
   <p>Capture your thoughts instantly. No login. No clutter.</p>
 
-  <div class="note-box">
+  <div class="note-box" data-aos="flip-up">
     <input type="text" id="noteInput" placeholder="Write a note..." />
     <button onclick="addNote()">Add</button>
   </div>
@@ -88,7 +100,7 @@
   <h2>Photography Showcase</h2>
   <p>Scroll through selected frames that shaped my view.</p>
 
-  <div class="gallery-container">
+  <div class="gallery-container" data-aos="zoom-out-up">
     <img src="https://source.unsplash.com/random/400x300?sig=1" alt="gallery" onclick="openModal(this.src)">
     <img src="https://source.unsplash.com/random/400x300?sig=2" alt="gallery" onclick="openModal(this.src)">
     <img src="https://source.unsplash.com/random/400x300?sig=3" alt="gallery" onclick="openModal(this.src)">
@@ -99,7 +111,7 @@
   <!-- Modal -->
   <div id="imgModal" class="modal" onclick="closeModal()">
     <span class="close">✕</span>
-    <img class="modal-content" id="modalImage">
+    <img alt="img" class="modal-content" id="modalImage">
   </div>
 </section>
 
@@ -128,7 +140,7 @@
     </div>
   </div>
 
-  <div class="contact-form">
+  <div class="roadmap-card back-glass" data-aos="zoom-in-up">
     <h3>Let's Connect</h3>
     <form onsubmit="submitFake(event)">
       <input type="text" placeholder="Your Name" required />

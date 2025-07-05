@@ -3,6 +3,21 @@ function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+}
+
+window.onload = () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+}
+// Smooth scroll to section – works good
+
+// AOS initialization
+
+
 // toggle roadmap – only one opens at a time
 function toggleDetails(card) {
   const details = card.querySelector('.details');
