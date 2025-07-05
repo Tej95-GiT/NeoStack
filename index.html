@@ -6,14 +6,11 @@
   <title>NeoStack – Dev Journey</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
-
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
 <body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
   <!-- Hero Section -->
   <header class="hero">
@@ -31,126 +28,128 @@
     </div>
   </header>
 
-  <!-- Placeholder Sections -->
+  <!-- Roadmap Section -->
   <section id="roadmap" class="roadmap-section">
-  <h2>DevPath – Roadmap</h2>
-  <p>Explore the essential steps of a developer journey</p>
+    <h2>DevPath – Roadmap</h2>
+    <p>Explore the essential steps of a developer journey</p>
 
-  <div class="roadmap-grid" data-aos="fade-up">
-    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-      <h3>HTML</h3>
-      <ul class="details">
-        <li>Semantic Tags</li>
-        <li>Forms & Inputs</li>
-        <li>SEO Basics</li>
-      </ul>
+    <div class="roadmap-grid" data-aos="fade-up">
+      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
+        <h3>HTML</h3>
+        <ul class="details">
+          <li>Semantic Tags</li>
+          <li>Forms & Inputs</li>
+          <li>SEO Basics</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
+        <h3>CSS</h3>
+        <ul class="details">
+          <li>Flexbox & Grid</li>
+          <li>Media Queries</li>
+          <li>Animations</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
+        <h3>JavaScript</h3>
+        <ul class="details">
+          <li>DOM Manipulation</li>
+          <li>Events</li>
+          <li>Local Storage</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
+        <h3>Git & GitHub</h3>
+        <ul class="details">
+          <li>Commits & Branches</li>
+          <li>Pull Requests</li>
+          <li>Pages Deployment</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
+        <h3>Projects</h3>
+        <ul class="details">
+          <li>Portfolio Site</li>
+          <li>Landing Page</li>
+          <li>Mini Tools</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-      <h3>CSS</h3>
-      <ul class="details">
-        <li>Flexbox & Grid</li>
-        <li>Media Queries</li>
-        <li>Animations</li>
-      </ul>
-    </div>
-
-    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-      <h3>JavaScript</h3>
-      <ul class="details">
-        <li>DOM Manipulation</li>
-        <li>Events</li>
-        <li>Local Storage</li>
-      </ul>
-    </div>
-
-    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-      <h3>Git & GitHub</h3>
-      <ul class="details">
-        <li>Commits & Branches</li>
-        <li>Pull Requests</li>
-        <li>Pages Deployment</li>
-      </ul>
-    </div>
-
-    <div class="roadmap-card" onclick="toggleDetails(this)" data-aos="fade-up">
-      <h3>Projects</h3>
-      <ul class="details">
-        <li>Portfolio Site</li>
-        <li>Landing Page</li>
-        <li>Mini Tools</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+  <!-- Notes Section -->
   <section id="notes" class="notes-section">
-  <h2>Quick Note Tool</h2>
-  <p>Capture your thoughts instantly. No login. No clutter.</p>
+    <h2>Quick Note Tool</h2>
+    <p>Capture your thoughts instantly. No login. No clutter.</p>
 
-  <div class="note-box" data-aos="flip-up">
-    <input type="text" id="noteInput" placeholder="Write a note..." />
-    <button onclick="addNote()">Add</button>
-  </div>
+    <div class="note-box" data-aos="flip-up">
+      <input type="text" id="noteInput" placeholder="Write a note..." />
+      <button onclick="addNote()">Add</button>
+    </div>
 
-  <ul id="noteList" class="note-list"></ul>
-</section>
+    <ul id="noteList" class="note-list"></ul>
+  </section>
 
+  <!-- Gallery Section -->
   <section id="gallery" class="gallery-section">
-  <h2>Photography Showcase</h2>
-  <p>Scroll through selected frames that shaped my view.</p>
+    <h2>Photography Showcase</h2>
+    <p>Scroll through selected frames that shaped my view.</p>
 
-  <div class="gallery-container" data-aos="zoom-out-up">
-    <img src="https://source.unsplash.com/random/400x300?sig=1" alt="gallery" onclick="openModal(this.src)">
-    <img src="https://source.unsplash.com/random/400x300?sig=2" alt="gallery" onclick="openModal(this.src)">
-    <img src="https://source.unsplash.com/random/400x300?sig=3" alt="gallery" onclick="openModal(this.src)">
-    <img src="https://source.unsplash.com/random/400x300?sig=4" alt="gallery" onclick="openModal(this.src)">
-    <img src="https://source.unsplash.com/random/400x300?sig=5" alt="gallery" onclick="openModal(this.src)">
-  </div>
+    <div class="gallery-container" data-aos="zoom-out-up">
+      <img src="https://source.unsplash.com/random/400x300?sig=1" alt="gallery" onclick="openModal(this.src)">
+      <img src="https://source.unsplash.com/random/400x300?sig=2" alt="gallery" onclick="openModal(this.src)">
+      <img src="https://source.unsplash.com/random/400x300?sig=3" alt="gallery" onclick="openModal(this.src)">
+      <img src="https://source.unsplash.com/random/400x300?sig=4" alt="gallery" onclick="openModal(this.src)">
+      <img src="https://source.unsplash.com/random/400x300?sig=5" alt="gallery" onclick="openModal(this.src)">
+    </div>
 
-  <!-- Modal -->
-  <div id="imgModal" class="modal" onclick="closeModal()">
-    <span class="close">✕</span>
-    <img alt="img" class="modal-content" id="modalImage">
-  </div>
-</section>
+    <!-- Modal -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+      <span class="close">✕</span>
+      <img alt="img" class="modal-content" id="modalImage">
+    </div>
+  </section>
 
+  <!-- About Section -->
   <section id="about" class="about-section">
-  <h2>About Me</h2>
-  <p>I’m Tejas Walunj – a builder of interfaces, thinker of logic, and lover of detail.</p>
+    <h2>About Me</h2>
+    <p>I’m Tejas Walunj – a builder of interfaces, thinker of logic, and lover of detail.</p>
 
-  <div class="about-grid">
-    <div class="timeline">
-      <h3>Journey</h3>
-      <ul>
-        <li><strong>2022–25</strong> – B.E. in Computer Engineering</li>
-        <li><strong>2022</strong> – GameCloud QA Tester (6 months)</li>
-        <li><strong>2019–22</strong> – Diploma in Computer Engineering</li>
-      </ul>
+    <div class="about-grid">
+      <div class="timeline">
+        <h3>Journey</h3>
+        <ul>
+          <li><strong>2022–25</strong> – B.E. in Computer Engineering</li>
+          <li><strong>2022</strong> – GameCloud QA Tester (6 months)</li>
+          <li><strong>2019–22</strong> – Diploma in Computer Engineering</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li><span>HTML</span><div class="bar" style="width: 90%;"></div></li>
+          <li><span>CSS</span><div class="bar" style="width: 85%;"></div></li>
+          <li><span>JavaScript</span><div class="bar" style="width: 60%;"></div></li>
+          <li><span>Git/GitHub</span><div class="bar" style="width: 75%;"></div></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li><span>HTML</span><div class="bar" style="width: 90%;"></div></li>
-        <li><span>CSS</span><div class="bar" style="width: 85%;"></div></li>
-        <li><span>JavaScript</span><div class="bar" style="width: 60%;"></div></li>
-        <li><span>Git/GitHub</span><div class="bar" style="width: 75%;"></div></li>
-      </ul>
+    <div class="roadmap-card back-glass" data-aos="zoom-in-up">
+      <h3>Let's Connect</h3>
+      <form onsubmit="submitFake(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
-  </div>
-
-  <div class="roadmap-card back-glass" data-aos="zoom-in-up">
-    <h3>Let's Connect</h3>
-    <form onsubmit="submitFake(event)">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</section>
-
+  </section>
 
   <footer>
     <p>© 2025 Tejas Walunj. Built from scratch with HTML, CSS, JS.</p>
