@@ -224,3 +224,78 @@ footer {
   cursor: pointer;
 }
 
+/* end of modal */
+
+/* about section */
+
+.about-section {
+  padding: 60px 20px;
+  background: #1c1c1c;
+  color: #fff;
+  text-align: center;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.timeline, .skills {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.timeline ul, .skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 10px 0;
+}
+
+.skills .bar {
+  height: 10px;
+  background: #00bcd4;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.contact-form {
+  margin-top: 50px;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #00bcd4;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #fff;
+}
+
+/* end of about section */
+

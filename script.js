@@ -59,3 +59,14 @@ function openModal(src) {
 function closeModal() {
   document.getElementById('imgModal').style.display = 'none';
 }
+ // end of gallery
+
+ // about
+ // about as refrence
+
+ function submitFake(e) {
+  e.preventDefault();
+  alert('Message sent (demo only)');
+}
+
+// about end
