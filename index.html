@@ -72,8 +72,37 @@
   </div>
 </section>
 
-  <section id="notes"><h2>Quick Note Tool</h2></section>
-  <section id="gallery"><h2>Photography Showcase</h2></section>
+  <section id="notes" class="notes-section">
+  <h2>Quick Note Tool</h2>
+  <p>Capture your thoughts instantly. No login. No clutter.</p>
+
+  <div class="note-box">
+    <input type="text" id="noteInput" placeholder="Write a note..." />
+    <button onclick="addNote()">Add</button>
+  </div>
+
+  <ul id="noteList" class="note-list"></ul>
+</section>
+
+  <section id="gallery" class="gallery-section">
+  <h2>Photography Showcase</h2>
+  <p>Scroll through selected frames that shaped my view.</p>
+
+  <div class="gallery-container">
+    <img src="https://source.unsplash.com/random/400x300?sig=1" alt="gallery" onclick="openModal(this.src)">
+    <img src="https://source.unsplash.com/random/400x300?sig=2" alt="gallery" onclick="openModal(this.src)">
+    <img src="https://source.unsplash.com/random/400x300?sig=3" alt="gallery" onclick="openModal(this.src)">
+    <img src="https://source.unsplash.com/random/400x300?sig=4" alt="gallery" onclick="openModal(this.src)">
+    <img src="https://source.unsplash.com/random/400x300?sig=5" alt="gallery" onclick="openModal(this.src)">
+  </div>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="close">✕</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</section>
+
   <section id="about"><h2>About Me</h2></section>
 
   <footer>
