@@ -41,109 +41,158 @@
   <!-- Roadmap Section -->
   <section id="roadmap" class="roadmap-section">
 
+  <h2 class="section-title">Dev Journey</h2>
     <div class="video-bg">
     <video autoplay muted loop playsinline>
-      <source src="content/waveblue.mp4" type="video/mp4" />
+      <source src="content/wavyblue1.mp4" type="video/mp4" />
     </video>
   </div>
 
-  <h2>Dev Journey</h2>
-  <div class="roadmap-vertical">
-    <div class="roadmap-left">
-      <ul>
-        <li class="step active">HTML Basics</li>
-        <li class="step">CSS Layouts</li>
-        <li class="step">JavaScript Logic</li>
-        <li class="step">Git & GitHub</li>
-        <li class="step">Projects</li>
-      </ul>
-    </div>
-    <div class="roadmap-right">
-      <div class="info" data-aos="fade-left">
-        <h3>Track Your Developer Journey</h3>
-        <p>This roadmap shows the stages of your growth, step by step. It’s a visual timeline, not just content blocks.</p>
-        <p>As you move forward, you can animate or interact with this to mark progress.</p>
-      </div>
-    </div>
+<!-- Roadmap Navigation --
+<div class="roadmap-left">
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
   </div>
+
+  <ul id="step-list">
+    <li class="step" onclick="showRoadmapDetail('html')">
+      <img src="/content/htmll.png" class="step-icon" /> HTML Basics
+    </li>
+    <li class="step" onclick="showRoadmapDetail('css')">
+      <img src="/content/csspng.png" class="step-icon" /> CSS Layouts
+    </li>
+    <li class="step" onclick="showRoadmapDetail('js')">
+      <img src="/content/jslogo.png" class="step-icon" /> JavaScript Logic
+    </li>
+    <li class="step" onclick="showRoadmapDetail('git')">
+      <img src="/content/github.png" class="step-icon" /> Git & GitHub
+    </li>
+    <li class="step" onclick="showRoadmapDetail('projects')">
+      <img src="/content/project.png" class="step-icon" /> Projects
+    </li>
+  </ul>
+</div>
+
+-->
+
+
+  <div class="roadmap-vertical">
+  <div class="roadmap-left">
+    <ul>
+      <li class="step fade-slide" onclick="showRoadmapDetail('html')">
+        <img src="/content/htmll.png" class="step-icon" /> HTML Basics
+      </li>
+      <li class="step fade-slide" onclick="showRoadmapDetail('css')">
+        <img src="content/csspng.png" class="step-icon" /> CSS Layouts
+      </li>
+      <li class="step fade-slide" onclick="showRoadmapDetail('js')">
+        <img src="/content/jslogo.png" class="step-icon" /> JavaScript Logic
+      </li>
+      <li class="step fade-slide" onclick="showRoadmapDetail('git')">
+        <img src="/content/github.png" class="step-icon" /> Git & GitHub
+      </li>
+      <li class="step fade-slide" onclick="showRoadmapDetail('projects')">
+        <img src="/content/project.png" class="step-icon" /> Projects
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div class="info-card fade-slide" id="roadmap-info">
+  <h3>My Dev Journey Starts Here</h3>
+  <p>Select a phase on the left to reveal insights from my personal learning.</p>
+</div>
+
+</div>
+
+
 </section>
 
 
   <!-- Notes Section -->
-  <section id="notes" class="notes-section">
+<section id="notes" class="notes-section">
+  <div class="notes-wrapper">
     <h2>Quick Note Tool</h2>
     <p>Capture your thoughts instantly. No login. No clutter.</p>
 
     <div class="note-box" data-aos="flip-up">
-      <input type="text" id="noteInput" placeholder="Write a note..." />
+      <textarea id="noteInput" placeholder="Write a note..."></textarea>
       <button onclick="addNote()">Add</button>
     </div>
+  </div>
 
-    <ul id="noteList" class="note-list"></ul>
-  </section>
+  <!-- ✅ Add this container below .note-box -->
+  <div id="floatingNotes" class="floating-notes-area"></div>
+</section>
+
+
+
+
 
   <!-- Gallery Section -->
-  <section id="certifications" class="gallery-section">
-
-    <div class="video-bg">
+<section id="certifications" class="gallery-section">
+  <div class="video-bg">
     <video autoplay muted loop playsinline>
       <source src="content/gradientpink.mp4" type="video/mp4" />
     </video>
   </div>
 
-  <h2>Certifications</h2>
-  <p>Recognitions and milestones in my learning path.</p>
+ <h2 class="cert-title">📜 My Achievements</h2>
+<p class="cert-desc">Moments that marked growth — each certificate a checkpoint in my journey through code, logic, and creation.</p>
 
-  <div class="gallery-container" data-aos="zoom-out-up">
-    <img src="contents/certificate1.jpg" alt="cert1" onclick="openModal(this.src)">
-    <img src="contents/certificate2.jpg" alt="cert2" onclick="openModal(this.src)">
-    <img src="contents/certificate3.jpg" alt="cert3" onclick="openModal(this.src)">
+
+  <div class="stack-gallery" data-aos="zoom-out-up">
+    <img src="content/aws.jpg" alt="AWS" class="cert-card" onclick="openModal(this.src)" />
+    <img src="content/Mastercard.jpg" alt="EA" class="cert-card" onclick="openModal(this.src)" />
+    <img src="content/EA.jpg" alt="Mastercard" class="cert-card" onclick="openModal(this.src)" />
   </div>
 
-  <!-- Modal viewer -->
   <div id="imgModal" class="modal" onclick="closeModal()">
     <span class="close">✕</span>
-    <img alt="mc" class="modal-content" id="modalImage" />
+    <img alt="cert" class="modal-content" id="modalImage" />
   </div>
 </section>
 
 
+
   <!-- About Section -->
   <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <p>I’m Tejas Walunj – a builder of interfaces, thinker of logic, and lover of detail.</p>
+  <h2 class="section-title about-title">Who I Am</h2>
+  <p class="about-sub">A builder of interfaces, thinker of logic, and lover of detail.</p>
 
-    <div class="about-grid">
-      <div class="timeline">
-        <h3>Journey</h3>
-        <ul>
-          <li><strong>2022–25</strong> – B.E. in Computer Engineering</li>
-          <li><strong>2022</strong> – GameCloud QA Tester (6 months)</li>
-          <li><strong>2019–22</strong> – Diploma in Computer Engineering</li>
-        </ul>
-      </div>
-
-      <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-          <li><span>HTML</span><div class="bar" style="width: 90%;"></div></li>
-          <li><span>CSS</span><div class="bar" style="width: 85%;"></div></li>
-          <li><span>JavaScript</span><div class="bar" style="width: 60%;"></div></li>
-          <li><span>Git/GitHub</span><div class="bar" style="width: 75%;"></div></li>
-        </ul>
-      </div>
+  <div class="about-grid">
+    <div class="timeline" data-aos="fade-right">
+      <h3>Journey</h3>
+      <ul>
+        <li><strong>2022–25</strong> – B.E. in Computer Engineering</li>
+        <li><strong>2022</strong> – GameCloud QA Tester (6 months)</li>
+        <li><strong>2019–22</strong> – Diploma in Computer Engineering</li>
+      </ul>
     </div>
 
-    <div class="roadmap-card back-glass" data-aos="zoom-in-up">
-      <h3>Let's Connect</h3>
-      <form onsubmit="submitFake(event)">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <div class="skills" data-aos="fade-left">
+      <h3>Skills</h3>
+      <ul>
+        <li><span>HTML</span><div class="bar" style="width: 90%;"></div></li>
+        <li><span>CSS</span><div class="bar" style="width: 85%;"></div></li>
+        <li><span>JavaScript</span><div class="bar" style="width: 60%;"></div></li>
+        <li><span>Git/GitHub</span><div class="bar" style="width: 75%;"></div></li>
+      </ul>
     </div>
-  </section>
+  </div>
+
+  <div class="roadmap-card back-glass" data-aos="zoom-in-up">
+    <h3>Let's Connect</h3>
+    <form onsubmit="submitFake(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2025 Tejas Walunj. Built from scratch with HTML, CSS, JS.</p>
