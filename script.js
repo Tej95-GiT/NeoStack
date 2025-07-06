@@ -66,7 +66,7 @@ function addNote() {
   const button = document.querySelector('.note-box button');
 
   // R I P P L E
-  button.classList.remove('ripple'); // reset
+  button.classList.remove('ripple', 'rippling'); // reset
   void button.offsetWidth;           // force reflow
   button.classList.add('ripple');
 
