@@ -273,3 +273,80 @@ const observer = new IntersectionObserver(entries => {
 });
 
 fadeItems.forEach(el => observer.observe(el));
+
+
+
+
+
+
+//  IntersectionObserver for Who I Am title glow line
+const aboutTitle = document.querySelector('.about-title');
+
+const titleObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      aboutTitle.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+if (aboutTitle) titleObserver.observe(aboutTitle);
+
+
+// Observe scroll visibility for "Who I Am" heading underline
+const whoTitle = document.querySelector('.about-title');
+
+if (whoTitle) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        whoTitle.classList.add('visible');
+      } else {
+        whoTitle.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(whoTitle);
+}
+
+
+
+
+// the line about me trigger 
+
+// this is button
+
+function submitFake(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.classList.add('clicked');
+  setTimeout(() => btn.classList.remove('clicked'), 400);
+  alert('Message sent (demo only)');
+}
+
+
+
+AOS.init({
+  duration: 800,
+  once: true
+});
+// Initialize AOS for animations
+
+
+
+const connectBox = document.querySelector('.connect-box');
+
+if (connectBox) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        connectBox.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  observer.observe(connectBox);
+}

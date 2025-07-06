@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -157,40 +159,120 @@
 
 
   <!-- About Section -->
-  <section id="about" class="about-section">
-  <h2 class="section-title about-title">Who I Am</h2>
-  <p class="about-sub">A builder of interfaces, thinker of logic, and lover of detail.</p>
+<section id="about" class="about-section">
 
+
+  <!-- Background Video -->
+ 
+  <div class="video-bg">
+     <video autoplay muted loop playsinline>
+      <source src="content/3dwaves.mp4" type="video/mp4" />
+     </video>
+  </div>
+
+
+  <!--  Section Title -->
+  <h2 class="section-title about-title">Who I Am</h2>
+  <p class="about-sub" data-aos="fade-up">A builder of interfaces, thinker of logic, and lover of detail - I am Tejas Walunj</p>
+
+  <!-- 🔧 Grid Layout -->
   <div class="about-grid">
-    <div class="timeline" data-aos="fade-right">
-      <h3>Journey</h3>
-      <ul>
-        <li><strong>2022–25</strong> – B.E. in Computer Engineering</li>
-        <li><strong>2022</strong> – GameCloud QA Tester (6 months)</li>
-        <li><strong>2019–22</strong> – Diploma in Computer Engineering</li>
-      </ul>
+    
+    <!--  Timeline Column -->
+    <div class="journey-column" data-aos="fade-right">
+      <h2 class="journey-title" data-aos="fade-up">My Journey</h2>
+
+      <div class="timeline-container" data-aos="fade-up">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-entry">
+          <div class="entry-box">
+            <h4>2025 – B.E. in Computer Engineering</h4>
+            <p>Wrapping up my engineering with a portfolio that reflects my growth across frontend, backend, and problem solving.</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="entry-box">
+            <h4>2022 – GameCloud QA Tester</h4>
+            <p>Tested real-time games, worked on bugs, logs, regression cycles, and experienced agile workflow using JIRA and TestRail.</p>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="entry-box">
+            <h4>2019–22 – Diploma in Computer Engineering</h4>
+            <p>Started with the basics of coding, networks, and UI design. Built static sites, explored C/C++, and understood tech fundamentals.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!--  Skills Column -->
     <div class="skills" data-aos="fade-left">
-      <h3>Skills</h3>
+      <h3 class="skills-heading">Skills</h3>
+
+
       <ul>
         <li><span>HTML</span><div class="bar" style="width: 90%;"></div></li>
         <li><span>CSS</span><div class="bar" style="width: 85%;"></div></li>
         <li><span>JavaScript</span><div class="bar" style="width: 60%;"></div></li>
-        <li><span>Git/GitHub</span><div class="bar" style="width: 75%;"></div></li>
+        <li><span>Git/GitHub</span><div class="bar" style="width: 65%;"></div></li>
       </ul>
+
+      <!-- Resume + Socials under skills -->
+      <div class="skills-footer" data-aos="fade-up">
+
+          <a href="content/tejas_walunj_cv.docx" class="resume-box windy" download>Download Resume</a>
+
+          <div class="social-icons">
+           <a href="https://github.com/Tej95-GiT?tab=repositories" target="_blank" class="icon windy">
+           <i class="fab fa-github"></i>
+           </a>
+          <a href="https://www.linkedin.com/in/tejas-walunj-59913324a" target="_blank" class="icon windy">
+            <i class="fab fa-linkedin"></i>
+               </a>
+          </div>
+
+
+      </div>
+
     </div>
+    
   </div>
 
-  <div class="roadmap-card back-glass" data-aos="zoom-in-up">
-    <h3>Let's Connect</h3>
-    <form onsubmit="submitFake(event)">
+    <!-- Inside your existing About Section (just after skills/resume) -->
+   <div class="connect-box" data-aos="fade-up">
+     <h2 class="connect-title">Let's Connect</h2>
+      <form class="connect-form" onsubmit="submitFake(event)">
+       <input type="text" placeholder="Your Name" required />
+       <input type="email" placeholder="Your Email" required />
+       <textarea placeholder="Your Message" required></textarea>
+       <button type="submit" class="send-btn">Send</button>
+       </form>
+    </div>
+
+
+</section>
+
+
+</div>
+
+<!-- 
+  <section class="connect-section" data-aos="fade-up">
+  <div class="connect-box">
+    <h3 class="connect-title">Let's Connect</h3>
+    <form onsubmit="submitFake(event)" class="connect-form">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+      <button type="submit" class="send-btn">Send ➤</button>
     </form>
   </div>
+</section>
+
+-->
+
 </section>
 
 
