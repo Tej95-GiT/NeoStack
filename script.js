@@ -1,7 +1,6 @@
 
+// Smooth scroll for internal links
 
-
-// Improved scroll-to-section with fallback
 function scrollToSection(id) {
   const section = document.getElementById(id);
   if (!section) return;
@@ -175,16 +174,12 @@ function makeDraggable(note) {
 }
 
 // Notes: Active notes array
-// Notes: Toggle note input visibility
-
-
-// Notes: Place note randomly within bounds
+// This array keeps track of currently active notes
+// It is used to prevent overlapping notes and manage note deletion
 // Notes: Toggle note input visibility
 
 // Notes: Delete a note
-function deleteNote(el) {
-  el.parentElement.remove();
-}
+
 
 // Gallery Modal (used for certifications now)
 function openModal(src) {
@@ -198,11 +193,8 @@ function closeModal() {
   document.getElementById('imgModal').style.display = 'none';
 }
 
-// Fake form submit
-function submitFake(e) {
-  e.preventDefault();
-  alert('Message sent (demo only)');
-}
+
+
 // Smooth scroll for internal links
 
 

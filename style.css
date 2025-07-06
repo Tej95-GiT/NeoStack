@@ -1,4 +1,4 @@
-/* RESET + GLOBALS */
+/* Css main */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body.dark .about-section {
 html {
   scroll-behavior: smooth;
 }
-/* LINKS */
+/* Reset some default styles */
 
 .back-glass {
   background: rgba(0, 255, 255, 0.05);
@@ -49,13 +49,7 @@ html {
   color: #0a0f2c;
 }
 
-/* Uncomment the following lines to add a neon effect to the hero title 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px #00f9ff;
-}
-*/
+
 
 .hero h1 {
   font-size: 3.2rem;
@@ -89,7 +83,7 @@ html {
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 10px;
-  background: rgba(57, 255, 20, 0.05); /* Irish Green transparent */
+  background: rgba(57, 255, 20, 0.05); 
   color: #2a0768;
   border: 2px solid #83f7ff;
   cursor: pointer;
@@ -104,17 +98,20 @@ html {
   box-shadow: 0 0 20px rgba(36, 20, 255, 0.4);
   transform: scale(1.05);
 }
-/* HERO VIDEO BACKGROUND */
+
+
+/* vid bg */
+
 .video-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   z-index: -1;
   pointer-events: none;
 }
-
 
 .video-bg video {
   width: 100%;
@@ -126,7 +123,8 @@ html {
 
 
 
-/* SECTION SPACING */
+/* selectors */
+
 section {
   padding: 60px 20px;
   text-align: center;
@@ -139,7 +137,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ROADMAP */
+/* roadmap sec */
 .roadmap-section {
   background: #1a1a1a;
   color: #fff;
@@ -183,7 +181,7 @@ footer {
   display: block;
 }
 
-/* NOTES */
+/* notes */
 
 
 
@@ -266,7 +264,7 @@ footer {
 
 .floating-note {
   position: absolute;
-  background: linear-gradient(135deg, #fffef9, #faee6e); /* memo yellow gradient */
+  background: linear-gradient(135deg, #fffef9, #faee6e); /* memo */
   color: #111;
   border-radius: 10px;
   padding: 18px 16px 14px 16px;
@@ -379,7 +377,7 @@ footer {
 
 
 
-/* GALLERY */
+/* Certification stuff */
 .gallery-section {
   background: #0c1e2c;
   color: #fff;
@@ -445,7 +443,7 @@ footer {
   cursor: pointer;
 }
 
-/* ABOUT */
+/* ABOUT who? */
 
 .about-title {
   font-size: 3.3rem;
@@ -460,7 +458,7 @@ footer {
   transition: all 0.8s ease;
 }
 
-/* When visible (triggered by IntersectionObserver JS) */
+
 .about-title.visible {
   opacity: 1;
   transform: translateY(0);
@@ -605,7 +603,7 @@ footer {
 .roadmap-left ul {
   list-style: none;
   padding: 0;
-  padding-left: 40px;         /* better alignment */
+  padding-left: 40px;         /* better alig */
   margin: 0;
   border-left: 3px solid rgba(0, 249, 255, 0.3);
   position: relative;
@@ -642,8 +640,8 @@ footer {
   background: #00f9ff;
   border-radius: 50%;
   position: absolute;
-  left: -33px; /* ← aligns better with vertical line */
-  top: 6px;    /* ← moves circle slightly down */
+  left: -33px;                 /*  this ones    aligns better with vertical line */
+  top: 6px;                                  /* this thing moves circle slightly down */
   box-shadow: 0 0 8px #00f9ff55;
 }
 
@@ -688,22 +686,6 @@ footer {
 }
 
 
-.video-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9) contrast(1.2);
-  opacity: 0.6;
-}
 
 
 .hero,
@@ -771,20 +753,6 @@ footer {
   position: relative;
 }
 
-/* roadmap items *//*
-.roadmap-left .step {
-  font-size: 1.2rem;
-  margin: 25px 0;
-  position: relative;
-  font-weight: 600;
-  color: #00f9ff;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: all 0.3s;
-}
-  */
 
 .roadmap-left .step:hover {
   opacity: 1;
@@ -841,7 +809,7 @@ footer {
   top: 0;
   left: -15px;
   width: 6px;
-  height: 0; /* will grow via JS */
+  height: 0;                                      /* iggg will grow via JS */
   border-radius: 3px;
   background: linear-gradient(to bottom, #00f9ff, #39ff14);
   transition: height 0.4s ease-in-out;
@@ -858,7 +826,7 @@ footer {
 
 
 
-/* right card animation */
+/* right card anima */
 .roadmap-right .info-card {
   max-width: 750px;
   background: rgba(255, 255, 255, 0.05);
@@ -1071,11 +1039,7 @@ footer {
 }
 
 
-.video-bg video {
-  object-fit: cover;
-  filter: brightness(1.2) contrast(1.2);
-  opacity: 0.35;
-}
+
 
 .journey-column {
   flex: 1;
@@ -1094,21 +1058,7 @@ footer {
   position: relative;
 }
 
-/*
-.journey-title::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 100px;
-  width: 1000px;
-  height: 5px;
-  background: linear-gradient(to right, #ffffff, #bef2ff);
-  border-radius: 50px;
-  filter: blur(2px);
-  opacity: 0.7;
-  animation: pulseLine 2.5s infinite ease-in-out;
-}
-*/
+
 @keyframes windPulse {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
@@ -1384,6 +1334,7 @@ footer {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .connect-box {
@@ -1411,7 +1362,7 @@ footer {
   text-align: center;
   margin-bottom: 30px;
   font-family: 'Space Grotesk', sans-serif;
-  background: linear-gradient(135deg, #00fff2, #7409ff);
+  background: linear-gradient(135deg, #00fff2, #1dff09);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 18px rgba(0, 255, 255, 0.2);
@@ -1450,7 +1401,7 @@ footer {
 
 .send-btn {
   padding: 14px;
-  background: linear-gradient(to right, #00ffff, #c814ff);
+  background: linear-gradient(to right, #00ffff, #41fc08);
   border: none;
   color: #000;
   font-weight: bold;
@@ -1539,7 +1490,7 @@ footer {
 /* Send Button */
 .send-btn {
   padding: 12px 0;
-  background: linear-gradient(to right, #00ffff, #c814ff);
+  background: linear-gradient(to right, #00ffff, #86ff14);
   border: none;
   color: #000;
   font-weight: 600;
@@ -1552,7 +1503,7 @@ footer {
 
 .send-btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(to right, #ae98ff, #5dfdcd);
+  background: linear-gradient(to right, #98ff84, #5dfdcd);
   color: #ffffff;
 }
 
